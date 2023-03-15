@@ -1,0 +1,365 @@
+:root{
+    --primary: #000;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 4px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body,html{
+
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.dflex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-flow: wrap;
+}
+
+nav{
+    background-color: #000;
+    color: white;
+    padding: 16px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+nav .title{
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+
+nav .content{
+    gap: 24px;
+    font-size: 14px;
+}
+
+nav .open_nav{
+    display: none;
+}
+
+.landing{
+    min-height: 100vh;
+    background: url("../img/bg.jpg");
+    background-size: cover;
+    display: grid;
+    align-items: center;
+}
+
+.landing .content{
+    width: min(90%, 1400px);
+    margin-inline: auto;
+    display: grid;
+    gap: 40px;
+    color: white;
+}
+
+.landing .name{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.landing .about{
+    width: min(90%, 600px);
+    font-size: 36px;
+}
+
+.landing .btn{
+    padding: 16px 30px;
+    background: var(--primary);
+    width: -moz-fit-content;
+    width: fit-content;
+    width: -webkit-fit-content;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.landing .btn:hover{
+    opacity: 0.8;
+}
+
+.landing .btn:active{
+    opacity: 0.6;
+}
+
+.container{
+    width: min(90%, 1400px);
+    margin: 64px auto;
+}
+
+.heading{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 36px;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.card{
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.card img{
+    padding: 24px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.card .title{
+    padding: 12px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+}
+
+.model-box{
+    position: fixed;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.7);
+    padding: 24px;
+    display: grid;
+    gap: 16px;
+    width: min(375px, 90%);
+    transition: right .5s ease;
+    display: none;
+    animation: open .25s ease;
+}
+
+.group label{
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.model-box input,
+.model-box select,
+.model-box textarea,
+.model-box button
+{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.model-box button[type="submit"]{
+    background-color: rgb(17 17 17);
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: 0.25s ease;
+}
+
+.model-box button[type="submit"]:hover{
+    background: #333;
+    color: #fff;
+}
+
+.model-box .btn-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.model-box input.close-btn{
+    background-color: transparent;
+    color: #888;
+    cursor: pointer;
+}
+
+.form-half{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+@keyframes open{
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;   
+    }
+}
+
+.sideSocial{
+    position: fixed;
+    right: 0px;
+    bottom: 150px;
+    transform: translateX(calc(100% - 50px));
+}
+
+:root:has(.gt-current-lang[data-gt-lang='ar']) .sideSocial{
+    right: unset;
+    left: 0;
+    transform: translateX(calc(-100% + 50px));
+}
+
+.social-item{
+    display: grid;
+    grid-template-columns: 50px max-content;
+    grid-template-rows: 50px;
+    background-color: var(--primary);
+    color: white;
+    transition: .35s ease;
+}
+
+.social-item:hover{
+    transform: translateX(calc(-100% + 50px));
+}
+
+:root:has(.gt-current-lang[data-gt-lang='ar']) .social-item:hover{
+    transform: translateX(calc(100% - 50px));
+}
+.social-item .icon{
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
+
+.social-item .data{
+    display: grid;
+    align-content: center;
+    border-left: 1px solid #ccc;
+    padding: 12px 24px;
+}
+
+footer{
+    padding: 60px;
+    background: var(--primary);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,300px));
+    justify-content: space-between;
+    gap: 24px;
+}
+
+footer .foot-item{
+    display: grid;
+    gap: 16px;
+    align-content: baseline;
+    color: #888;
+}
+
+footer img{
+    width: 80px;
+}
+
+.foot-item .heading{
+    color: white;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.foot-item .desc{
+    display: grid;
+    gap: 8px;
+    line-height: 1.4;
+}
+
+.social-links{
+    display: flex;
+    gap: 24px;
+}
+
+#backToTop{
+    position: fixed;
+    bottom: 40px;
+    right: 16px;
+    display: grid;
+    place-items: center;
+    width: 0px;
+    aspect-ratio: 1;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: .25s ease;
+}
+
+footer iframe{
+    width: min(100%, 300px);
+}
+
+@media screen and (max-width: 600px){
+    nav .content {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0px;
+        overflow: hidden;
+        background-color: var(--primary);
+        display: grid;
+        font-size: 22px;
+        align-content: start;
+        white-space: nowrap;
+        transition: 0.25s cubic-bezier(0,.97,.48,1.18);
+    }
+
+    nav .open_nav.active ~ .content{
+        padding: 40px;
+        width: 250px;
+    }    
+    
+    nav .open_nav{
+        display: block;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .landing .content{
+        gap: 24px;
+    }
+    .landing .name{
+        font-size: 40px;
+    }
+    .landing .about{
+        font-size: 24px;
+    }
+    .hide{
+        display: none;
+    }
+    .model-box{
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+}
