@@ -6,8 +6,9 @@
     <title>Abstract Classes</title>
     <meta name="title" content="Abstract Classes">
     <meta name="description" content="Abstract Classes is a coaching for learing web development and coding language. Here you can learn languages like HTML, CSS, JavaScript, PHP, SQL, C/C++, Java, Python with live coding examples and by building projects.">
-
+    <meta name="author" content="Urooj Khan">
     <meta name="theme-color" content="rgba(17,17,17,0.9)">
+    <!-- <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"> -->
     <link rel="stylesheet" href="css/index.css">
 
 </head>
@@ -18,6 +19,7 @@
         <div class="content dflex">
             <a href="#">Home</a>
             <a href="#courses">Courses</a>
+            <a href="https://forms.gle/QvFdGer87bEX9faA6" target="_blank">Register</a>
             <a href="#footer">Contact Us</a>
         </div>
     </nav>
@@ -26,11 +28,11 @@
         <div class="content">
             <div class="name">Build your career with us</div>
             <div class="about">Step into a world of digital creation and innovation with our web development and programming language coaching classes.</div>
-            <a class="btn open-btn" href="#courses">Browse courses <i class="fas fa-fw fa-angle-double-right"></i></a>
+            <a href="#courses" class="btn open-btn">Browse courses <i class="fas fa-fw fa-angle-double-right"></i></a>
         </div>
     </section>
 
-    <section id="courses" class="container services">
+    <section id="courses" class="container courses">
         <div class="heading">Our Courses</div>
         <div class="row"></div>
     </section>
@@ -51,6 +53,7 @@
             <div class="heading">Quick Links</div>
             <div class="desc">
                 <a href="#">Home</a>
+                <a href="https://forms.gle/QvFdGer87bEX9faA6" target="_blank">Register</a>
                 <a href="#courses">Courses</a>
             </div>
         </div>
@@ -62,7 +65,7 @@
                 <span>near Integral University,</span>
                 <span>Phone: <a href="tel:+918114076364">+918114076364</a></span>
                 <span>Mobile: <a href="tel:+919506076364">+919506076364</a></span>
-                <span>Email: <a href="mailto:uroojk844@gmail.com">uroojk844@gmail.com</a></span>
+                <span>Email: <a href="mailto:uroojk844@gmail.com">uroojk844@gmailksa.com</a></span>
             </div>
         </div>
         <div class="foot-item">
@@ -78,10 +81,16 @@
     <script src="js/index.js"></script>
     
     <script>
-        for (let i = 0; i < serviceList.length; i++) {
-            $('.services .row').append(`            <div class="card">
-                <img src="img/${i+1}.png" alt="png">
-                <div class="title">${serviceList[i].title}</div>
+        for (let i = 0; i < courseList.length; i++) {
+            $('.courses .row').append(`<div class="card">
+                <div class="image">
+                    <img src="img/${i+1}.png" alt="png">
+                </div>
+                <div class="content">
+                    <div class="title">${courseList[i].title}</div>
+                    <div class="desc">Duration: 3 Months</div>
+                    <a href="https://forms.gle/QvFdGer87bEX9faA6" class="btn">Enroll now</a>
+                </div>
             </div>`);
         }
     </script>

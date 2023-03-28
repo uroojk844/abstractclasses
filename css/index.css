@@ -64,8 +64,11 @@ nav .open_nav{
     display: none;
 }
 
-.landing{
+section{
     min-height: 100vh;
+}
+
+.landing{
     background: url("../img/bg.jpg");
     background-size: cover;
     display: grid;
@@ -110,11 +113,12 @@ nav .open_nav{
 
 .container{
     width: min(90%, 1400px);
-    margin: 64px auto;
+    margin: 0 auto;
+    padding: 64px 0;
 }
 
 .heading{
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 36px;
 }
@@ -126,98 +130,52 @@ nav .open_nav{
 }
 
 .card{
+    border: 1px solid #e5e5e5;
+    border-radius: 24px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-.card img{
+.card .image{
     padding: 24px;
-    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.card img{
+    width: 90px;
     object-fit: contain;
     object-position: center;
 }
 
-.card .title{
-    padding: 12px 16px;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: #000;
-    color: #fff;
-}
-
-.model-box{
-    position: fixed;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.7);
+.card .content{
     padding: 24px;
     display: grid;
-    gap: 16px;
-    width: min(375px, 90%);
-    transition: right .5s ease;
-    display: none;
-    animation: open .25s ease;
+    gap: 8px;
 }
 
-.group label{
-    display: inline-block;
-    margin-bottom: 4px;
+.card .title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card .desc{
     font-size: 14px;
-}
-
-.model-box input,
-.model-box select,
-.model-box textarea,
-.model-box button
-{
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-}
-
-.model-box button[type="submit"]{
-    background-color: rgb(17 17 17);
-    color: #fff;
-    cursor: pointer;
-    font-size: 15px;
-    letter-spacing: 1px;
-    transition: 0.25s ease;
-}
-
-.model-box button[type="submit"]:hover{
-    background: #333;
-    color: #fff;
-}
-
-.model-box .btn-group{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-}
-
-.model-box input.close-btn{
-    background-color: transparent;
     color: #888;
-    cursor: pointer;
 }
 
-.form-half{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+.card .btn{
+    background-color: #000;
+    color: #eee;
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 14px;
+    margin-top: 8px;
 }
 
-@keyframes open{
-    0%{
-        scale: 0;
-    }
-    100%{
-        scale: 1;   
-    }
+.container iframe{
+    width: 100%;
+    min-height: 1140px;
+    border: none;
 }
 
 .sideSocial{
@@ -225,12 +183,6 @@ nav .open_nav{
     right: 0px;
     bottom: 150px;
     transform: translateX(calc(100% - 50px));
-}
-
-:root:has(.gt-current-lang[data-gt-lang='ar']) .sideSocial{
-    right: unset;
-    left: 0;
-    transform: translateX(calc(-100% + 50px));
 }
 
 .social-item{
@@ -246,9 +198,6 @@ nav .open_nav{
     transform: translateX(calc(-100% + 50px));
 }
 
-:root:has(.gt-current-lang[data-gt-lang='ar']) .social-item:hover{
-    transform: translateX(calc(100% - 50px));
-}
 .social-item .icon{
     display: grid;
     place-items: center;
