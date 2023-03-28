@@ -1,4 +1,4 @@
-var serviceList = [
+var courseList = [
     {
         title: "HTML"
     },
