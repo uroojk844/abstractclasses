@@ -21,9 +21,9 @@
 }
 
 body,html{
-
     scroll-behavior: smooth;
     min-height: 100vh;
+    background-color: #e5e5e5;
 }
 
 a{
@@ -125,25 +125,25 @@ section{
 
 .row{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
 }
 
 .card{
-    border: 1px solid #e5e5e5;
     border-radius: 24px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1),
+    -3px -3px 5px rgba(255,255,255,0.9);
 }
 
 .card .image{
-    padding: 24px;
+    padding: 48px 0;
     text-align: center;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #fff;
 }
 
 .card img{
     width: 90px;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 
@@ -160,16 +160,20 @@ section{
 
 .card .desc{
     font-size: 14px;
-    color: #888;
+    color: #555;
 }
 
 .card .btn{
-    background-color: #000;
+    background-color: #222;
     color: #eee;
     padding: 12px 0;
     text-align: center;
-    border-radius: 14px;
+    border-radius: 20px;
     margin-top: 8px;
+}
+
+.card .btn:hover{
+    background-color: #000;
 }
 
 .container iframe{

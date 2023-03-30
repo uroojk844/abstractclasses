@@ -1,28 +1,64 @@
 var courseList = [
     {
-        title: "HTML"
+        title: "HTML",
+        category: 'Front-end Development',
+        duration: '3 Months'
     },
     {
         title: "CSS",
+        category: 'Front-end Development',
+        duration: '3 Months'
+    },
+    {
+        title: "Bootstrap",
+        category: 'Front-end Development',
+        duration: '3 Months'
     },
     {
         title: "JavaScript",
+        category: 'Front-end Development',
+        duration: '3 Months'
     },
     {
         title: "PHP",
+        category: 'Back-end Development',
+        duration: '4 Months'
     },
     {
         title: "SQL",
+        category: 'Back-end Development',
+        duration: '4 Months'
     },
     {
         title: "Python",
+        category: 'Programming Language',
+        duration: '3 Months'
     },
     {
         title: "C++",
+        category: 'Programming Language',
+        duration: '3 Months'
     },
     {
         title: "Java",
-    }
+        category: 'Programming Language',
+        duration: '3 Months'
+    },
+    {
+        title: "React.js",
+        category: 'MERN',
+        duration: '3 Months'
+    },
+    {
+        title: "Node.js",
+        category: 'MERN',
+        duration: '3 Months'
+    },
+    {
+        title: "Express.js",
+        category: 'MERN',
+        duration: '3 Months'
+    },
 ];
 
 let isNavOpen = false;
