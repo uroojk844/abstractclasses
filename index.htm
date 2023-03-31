@@ -18,7 +18,9 @@
 <body>
     <nav class="dflex">
         <div class="title" translate="no"><span class="hide"></span>Abstract Classes</div>
-        <div class="open_nav"><i class="fas fa-fw fa-bars"></i></div>
+        <div class="open_nav">
+            <box-icon name='menu' color="#fff"></box-icon>
+        </div>
         <div class="content dflex">
             <a href="#">Home</a>
             <a href="#courses">Courses</a>
@@ -32,7 +34,8 @@
             <div class="name">Build your career with us</div>
             <div class="about">Step into a world of digital creation and innovation with our web development and
                 programming language coaching classes.</div>
-            <a href="#courses" class="btn open-btn">Browse courses <i class="fas fa-fw fa-angle-double-right"></i></a>
+            <a href="#courses" class="btn open-btn">Browse courses <box-icon name='chevrons-right' color="#fff">
+                </box-icon></a>
         </div>
     </section>
 
@@ -43,20 +46,24 @@
 
     <div class="sideSocial" translate="no">
         <div class="social-item">
-            <div class="icon"><i class="fas fa-phone"></i></div>
+            <div class="icon">
+                <box-icon type="solid" name='phone' color="#fff"></box-icon>
+            </div>
             <a href="tel:+918114076364" class="data">+918114076364</a>
         </div>
     </div>
 
     <a href="#" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
+        <box-icon name='up-arrow-alt' color="#fff"></box-icon>
     </a>
 
     <footer id="footer">
         <div class="foot-item">
             <div class="heading">Abstract Classes</div>
             <div class="desc">
-                Abstract Classes is a coaching for learing web development and coding language. Here you can learn languages like HTML, CSS, JavaScript, PHP, SQL, C/C++, Java, Python with live coding examples and by building projects.
+                Abstract Classes is a coaching for learing web development and coding language. Here you can learn
+                languages like HTML, CSS, JavaScript, PHP, SQL, C/C++, Java, Python with live coding examples and by
+                building projects.
             </div>
         </div>
         <div class="foot-item">
@@ -88,26 +95,8 @@
             </div>
         </div>
     </footer>
-
-    <script src="https://kit.fontawesome.com/a24ff9630f.js" crossorigin="anonymous" defer></script>
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/index.js"></script>
-
-    <script>
-        for (let i = 0; i < courseList.length; i++) {
-            $('.courses .row').append(`<div class="card">
-                <div class="image">
-                    <img src="img/${i+1}.png" alt="png">
-                </div>
-                <div class="content">
-                    <div class="title">${courseList[i].title}</div>
-                    <div class="desc"><b>Duration</b>: ${courseList[i].duration}</div>
-                    <div class="desc"><b>Category</b>: ${courseList[i].category}</div>
-                    <a target="_blank" href="https://forms.gle/QvFdGer87bEX9faA6" class="btn">Enroll now</a>
-                </div>
-            </div>`);
-        }
-    </script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
+    <script src="js/index.js" defer></script>
 </body>
 
 </html>

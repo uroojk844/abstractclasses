@@ -47,33 +47,65 @@ var courseList = [
     {
         title: "React.js",
         category: 'MERN',
-        duration: '3 Months'
+        duration: '4 Months'
     },
     {
         title: "Node.js",
         category: 'MERN',
-        duration: '3 Months'
+        duration: '4 Months'
     },
     {
         title: "Express.js",
         category: 'MERN',
-        duration: '3 Months'
+        duration: '4 Months'
     },
 ];
 
-let isNavOpen = false;
-$('.open_nav').click(function (e) { 
-    $(this).toggleClass('active');
-    if (!isNavOpen) 
-        $('.open_nav svg').attr('data-icon', 'xmark');
-    else
-        $('.open_nav svg').attr('data-icon', 'bars');
-    isNavOpen = !isNavOpen;
-});
+for (let i = 0; i < courseList.length; i++) {
+    let card = document.createElement("div");
+    card.className = "card";
+    let image = document.createElement("div");
+    image.className = "image";
+    let img = document.createElement("img");
+    img.setAttribute("src", `img/${i+1}.png`);
+    let c = document.createElement("div");
+    c.className = "content";
+    let cardTitle = document.createElement("div");
+    cardTitle.className = "title";
+    cardTitle.innerHTML = courseList[i].title;
+    let desc = document.createElement("div");
+    desc.className = "desc";
+    desc.innerHTML = courseList[i].duration;
+    let desc1 = document.createElement("div")
+    desc1.className = "desc1";
+    desc1.innerHTML = courseList[i].category;
+    let a = document.createElement("a");
+    a.setAttribute("href", "https://forms.gle/QvFdGer87bEX9faA6");
+    a.className = ".btn";
+    image.append(img);
+    c.append(cardTitle);
+    c.append(desc);
+    c.append(desc1);
+    c.append(a);
+    card.appendChild(image);
+    card.appendChild(c);
+    document.querySelector('.courses .row').append(card);
+}
 
-$(window).scroll(function () { 
-    if($(this).scrollTop() > $(window).height())
-        $('#backToTop').css('width', '50px');
+let isNavOpen = false;
+document.querySelector('.open_nav').onclick = function (e) { 
+    $(this).toggleClass('active');
+    let icon = document.querySelector('.open_nav box-icon')
+    if (!isNavOpen) 
+        icon.setAttribute('name','x');
     else
-        $('#backToTop').css('width', 0);
-});
+        icon.setAttribute('name','menu');
+    isNavOpen = !isNavOpen;
+}
+
+window.onscroll = function () { 
+    if(this.scrollY > window.innerHeight)
+        document.querySelector('#backToTop').style.width = '50px';
+    else
+        document.querySelector('#backToTop').style.width = 0;
+}
