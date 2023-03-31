@@ -101,6 +101,9 @@ section{
     width: -webkit-fit-content;
     border-radius: 4px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .landing .btn:hover{
