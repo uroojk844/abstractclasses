@@ -68,6 +68,7 @@ for (let i = 0; i < courseList.length; i++) {
     image.className = "image";
     let img = document.createElement("img");
     img.setAttribute("src", `img/${i+1}.png`);
+    img.setAttribute("alt", courseList[i].title);
     let c = document.createElement("div");
     c.className = "content";
     let cardTitle = document.createElement("div");
