@@ -357,6 +357,10 @@ footer iframe{
         display: block;
         font-size: 24px;
     }
+    
+    .h-grid .heading{
+        font-size: 48px;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -375,5 +379,8 @@ footer iframe{
     .model-box{
         right: 50%;
         transform: translate(50%, -50%);
+    }
+    .h-grid{
+        grid-template-columns: 1fr;
     }
 }
