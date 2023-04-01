@@ -1,5 +1,5 @@
 :root{
-    --primary: #000;
+    --primary: #111;
 }
 
 ::-webkit-scrollbar{
@@ -40,7 +40,7 @@ a{
 }
 
 nav{
-    background-color: #000;
+    background-color: var(--primary);
     color: white;
     padding: 16px;
     width: 100%;
@@ -118,6 +118,7 @@ section{
     width: min(90%, 1400px);
     margin: 0 auto;
     padding: 64px 0;
+    display: grid;
 }
 
 .heading{
@@ -179,6 +180,62 @@ section{
     background-color: #000;
 }
 
+.h-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+    place-items: center;
+}
+
+.half img{
+    width: 100%;
+    mix-blend-mode: multiply;
+}
+
+.half .desc{
+    margin-top: 16px;
+    font-size: 26px;
+    max-width: 280px;
+}
+
+.h-grid .heading{
+    font-size: 60px;
+    margin-bottom: 24px;
+}
+
+.table{
+    padding: 12px;
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    height: max-content;
+    margin: 36px auto 0;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table tr:nth-child(1){
+    background-color: var(--primary);
+    color: #eee;
+}
+
+table td,
+table th{
+    text-align: center;
+    padding: 16px;
+    border: 1px solid #ccc;
+}
+
+table td.dflex{
+    gap: 0;
+    justify-content: center;
+}
+
 .container iframe{
     width: 100%;
     min-height: 1140px;
@@ -199,6 +256,7 @@ section{
     background-color: var(--primary);
     color: white;
     transition: .35s ease;
+    border-radius: 8px 0 0 8px;
 }
 
 .social-item:hover{
