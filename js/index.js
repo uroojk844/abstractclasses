@@ -82,7 +82,7 @@ for (let i = 0; i < courseList.length; i++) {
     desc1.innerHTML = courseList[i].category;
     let a = document.createElement("a");
     a.innerHTML = "Enroll Now";
-    a.setAttribute("href", "https://forms.gle/pRkMspEMTg9Rr6aK7");
+    a.setAttribute("href", "https://forms.gle/KbdXtaiuYFRyrjkf8");
     a.className = "btn";
     image.append(img);
     c.append(cardTitle);
